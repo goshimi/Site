@@ -44,7 +44,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #242424;
 }
 h1 {
     color: #fff;
@@ -59,7 +58,7 @@ h1 {
 }
 
 .login-form h1 span {
-    color: #6a11cb;
+    color: #348ff7;
 }
 
 .login-form input {
