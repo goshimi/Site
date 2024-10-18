@@ -7,6 +7,10 @@
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #161472;
+    background-image: url('https://meups.com.br/wp-content/uploads/2018/05/Detroit-Become-Human_2.jpg'); /* Coloque o caminho da sua imagem aqui */
+    background-size: cover; /* Garante que a imagem cubra toda a página */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
     color: #fff;
     display: flex;
     justify-content: center;
@@ -14,29 +18,32 @@ body {
     height: 100vh;
 }
 
+
 .left-panel img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    opacity: 90%;
 }
 
 .login-container {
     display: flex;
     width: 900px;
     height: 600px;
-    background-color: #1e1e1e;
+    background-color: rgba(30, 30, 30, 0.70); /* Ajuste a transparência com o último valor (0.85 é 85% opaco) */
     border-radius: 15px;
     overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .left-panel {
     width: 50%;
-    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #2575fc 100%);
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 50%;
 }
-
 
 .right-panel {
     width: 50%;
@@ -45,11 +52,12 @@ body {
     flex-direction: column;
     justify-content: center;
 }
+
 h1 {
     color: #fff;
     font-size: 24px;
     margin-bottom: 20px;
-    font-weight: 600; 
+    font-weight: 600;
 }
 
 .login-form h1 {
@@ -69,12 +77,16 @@ h1 {
     border: none;
     background-color: #333;
     color: #fff;
+    transition: background-color 0.3s ease;
 }
 
 .login-form input::placeholder {
     color: #999;
 }
 
+.login-form input:focus {
+    background-color: #444;
+}
 
 .btn {
     width: 100%;
@@ -83,16 +95,23 @@ h1 {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .btn.login {
-    background-color: #6a11cb;
+    background-color: #1177cb;
+    background: linear-gradient(135deg, #68d5f7 0%, #1177cb 100%);
     color: #fff;
 }
 
 .btn.signup {
-    background-color: #2575fc;
+    background-color: #0e3983;
+    background: linear-gradient(135deg, #68d5f7 0%, #1177cb 100%);
     color: #fff;
+}
+
+.btn:hover {
+    opacity: 0.9;
 }
 
 .social-icons {
@@ -104,6 +123,7 @@ h1 {
     color: #fff;
     margin: 0 10px;
     font-size: 24px;
+    transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
