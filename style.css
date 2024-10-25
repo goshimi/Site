@@ -7,17 +7,16 @@
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #161472; 
-    background-image: url('https://files.fm/thumb_show.php?i=wtvhcc5kn2'); /* Coloque o caminho da sua imagem aqui */
-    background-size: cover; /* Garante que a imagem cubra toda a página */
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-image: url('https://files.fm/thumb_show.php?i=wtvhcc5kn2');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
-
 
 .left-panel img {
     width: 100%;
@@ -30,7 +29,7 @@ body {
     display: flex;
     width: 900px;
     height: 600px;
-    background-color: rgba(30, 30, 30, 0.70); /* Ajuste a transparência com o último valor (0.85 é 85% opaco) */
+    background-color: rgba(30, 30, 30, 0.70);
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -94,31 +93,45 @@ h1 {
     background-color: #444;
 }
 
-.btn {
-    width: 100%;
-    padding: 15px;
-    margin-top: 10px;
-    border: none;
-    border-radius: 5px;
+.diagonal-btn {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    overflow: hidden;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    border: 2px solid #fff;
+    transition: color 0.4s;
+    z-index: 1;
 }
 
-.btn.login {
-    background-color: #1177cb;
-    background: linear-gradient(135deg, #68d5f7 0%, #1177cb 100%);
-    color: #fff;
+.diagonal-btn::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    width: 300%;
+    height: 300%;
+    background-color: #68d5f7;
+    transition: all 0.5s ease;
+    transform: rotate(45deg);
+    z-index: -1;
 }
 
-.btn.signup {
-    background-color: #0e3983;
-    background: linear-gradient(135deg, #68d5f7 0%, #1177cb 100%);
-    color: #fff;
+.diagonal-btn:hover::before {
+    top: -100%;
+    left: -100%;
 }
 
-.btn:hover {
-    opacity: 0.9;
+.diagonal-btn:hover {
+    color: #333; /* Cor do texto quando o efeito cobre o botão */
 }
+
 
 .social-icons {
     margin-top: 30px;
